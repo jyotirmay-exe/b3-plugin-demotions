@@ -1,0 +1,19 @@
+<configuration plugin="demotions">
+    <settings name="settings">
+        <!--  -->
+        <set name="minLevel">80</set>
+        <set name="webhookURL">https://discord.com/api/webhooks/895202691431678032/ZUWz7RyL7GkKE85oCAipy_SvXaogZzjQ0Z1WEs7_x_3LyfO0vpwHMXpEtRXg7ABQBLjM</set>
+    </settings>
+    
+	<settings name="messages">
+        <!-- valid placeholders -->
+        <!-- {client}, {admin}-->
+        <set name="display_message">{client} has been demoted to ^2Regular^7 [^32^7] by {admin}.</set>
+        <!-- to send pm to the client if the client is online -->
+        <set name="private_message">You have been demoted. Enjoy ^3:)</set>
+        <!-- if player is not an admin (current level<20) -->
+        <set name="notAdmin_message">^3Player is currently not an admin. Not demoting.</set>
+        <!-- if admin level < client level -->
+        <set name="higherAdmin_message">^3{client} ^7is a higher level admin. Can't demote!</set>
+	</settings>
+</configuration>
