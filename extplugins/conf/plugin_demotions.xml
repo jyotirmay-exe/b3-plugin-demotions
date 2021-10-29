@@ -1,6 +1,8 @@
 <configuration plugin="demotions">
     <settings name="settings">
         <!--  -->
+        <!-- create demotions table automatically if it doesn't exists? (0/1) -->
+        <set name="autoCreate">1</set>
         <set name="minLevel">80</set>
         <set name="webhookURL">https://discord.com/api/webhooks/895202691431678032/ZUWz7RyL7GkKE85oCAipy_SvXaogZzjQ0Z1WEs7_x_3LyfO0vpwHMXpEtRXg7ABQBLjM</set>
     </settings>

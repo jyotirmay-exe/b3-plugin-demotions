@@ -5,9 +5,8 @@ from datetime import datetime
 import urllib2
 import json
 
-"""
-DROP TABLE IF EXISTS `demotions`;
-CREATE TABLE `demotions` (
+query="""
+CREATE TABLE IF NOT EXISTS `demotions` (
   `id` int(11) UNIQUE AUTO_INCREMENT PRIMARY KEY,
   `client_id` int(11) NOT NULL UNIQUE,
   `admin_id` int(11) NOT NULL,
