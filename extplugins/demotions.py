@@ -86,6 +86,7 @@ class DemotionsPlugin(b3.plugin.Plugin):
 
     def onLoadConfig(self):
         self.debug("loading config..")
+        self.autoCreate = int(self.config.get("settings","autoCreate"))
         self.display_message = str(self.config.get("messages","display_message"))
         self.private_message = str(self.config.get("messages","private_message"))
         self.notAdmin_message = str(self.config.get("messages","notAdmin_message"))
@@ -103,6 +104,9 @@ class DemotionsPlugin(b3.plugin.Plugin):
             self.debug('Plugin loaded normal')
         self._adminPlugin.registerCommand(self, "demote", self.minLevel, self.cmd_demote,alias="d")
         global pluginInstance
+        if self.autoCreate==1:
+            global query
+            self.console.storage._query(query)
         pluginInstance = self
         try:
             self.console.storage._query("select * from demotions;")
