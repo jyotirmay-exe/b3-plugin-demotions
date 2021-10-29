@@ -113,7 +113,7 @@ class DemotionsPlugin(b3.plugin.Plugin):
       
     def updateTable(self,client_id,admin_id):
         try:
-            insQuery = "insert into demotions (client_id,admin_id,time_add) values (%s,%s,unix_timestamp());"
+            insQuery = "insert into demotions (client_id,admin_id,time_add,time_edit) values (%s,%s,unix_timestamp(),unix_timestamp());"
             updQuery = "update demotions set count=%s,admin_id=%s,time_edit=unix_timestamp() where client_id=%s";
 
             rows = self.console.storage._query("select * from demotions where client_id = %s;"%(client_id)).getRow()
