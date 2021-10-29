@@ -1,0 +1,2 @@
+<h1>Demotions Plugin for B3</h1>
+A plugin for <a href="https://github.com/BigBrotherBot/big-brother-bot">BigBrotherBot</a> to demote and maintain records for player demotions. Using the <code>!demote</code> command, a client will be demoted to the group <code>Regular [2]</code>, adding the record of the player's demotion to b3's database in the table <code>demotions</code> and sending the demotions as a webhook to server's discord.
