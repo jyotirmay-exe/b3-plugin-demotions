@@ -104,15 +104,17 @@ class DemotionsPlugin(b3.plugin.Plugin):
             self.debug('Plugin loaded normal')
         self._adminPlugin.registerCommand(self, "demote", self.minLevel, self.cmd_demote,alias="d")
         global pluginInstance
-        if self.autoCreate==1:
-            global query
-            self.console.storage._query(query)
+        
         pluginInstance = self
         try:
             self.console.storage._query("select * from demotions;")
             self.debug("located demotions table.")
         except Exception as ex:
             self.debug("Error loading demotions table: %s"%ex)
+            if self.autoCreate==1:
+                global query
+                self.console.storage._query(query)
+                self.debug("create table demotions as it didn't exist")
       
     def updateTable(self,client_id,admin_id):
         try:
