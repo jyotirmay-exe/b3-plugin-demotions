@@ -6,15 +6,19 @@ import urllib2
 import json
 
 query="""
-CREATE TABLE IF NOT EXISTS `demotions` (
-  `id` int(11) UNIQUE AUTO_INCREMENT PRIMARY KEY,
-  `client_id` int(11) NOT NULL UNIQUE,
+CREATE TABLE `demotions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `client_id` int(11) NOT NULL,
   `admin_id` int(11) NOT NULL,
   `count` int(11) NOT NULL DEFAULT '1',
-  `inactive` TINYINT NOT NULL DEFAULT '0',
+  `inactive` tinyint(4) NOT NULL DEFAULT '0',
   `time_add` int(11) NOT NULL,
-  `time_edit` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `time_edit` int(11) NOT NULL DEFAULT '0',
+  `reason` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `client_id` (`client_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 """
 __author__=__version__=None
 
