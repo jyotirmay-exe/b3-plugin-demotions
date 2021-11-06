@@ -3,7 +3,17 @@
         <!--  -->
         <!-- create demotions table automatically if it doesn't exists? (0/1) -->
         <set name="autoCreate">1</set>
-        <set name="minLevel">80</set>
+        <!-- minimum level for !demote(d) -->
+        <set name="minLevelD">80</set>
+        <!-- minimum level for !demotiontest(dt) -->
+        <set name="minLevelDT">60</set>
+        <!-- minimum level for new !putgroup(pg) -->
+        <set name="minLevelPG">80</set>
+        <!-- minimum level for demoting without reason -->
+        <set name="no_reason_level">100</set>
+        <!-- use new !putgroup(pg) command synced with demotions? -->
+        <set name="new_putgroup">1</set>
+        <!-- webhook url for sending demotion webhooks -->
         <set name="webhookURL">https://discord.com/api/webhooks/895202691431678032/ZUWz7RyL7GkKE85oCAipy_SvXaogZzjQ0Z1WEs7_x_3LyfO0vpwHMXpEtRXg7ABQBLjM</set>
     </settings>
     
