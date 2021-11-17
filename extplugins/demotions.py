@@ -116,8 +116,8 @@ class DemotionsPlugin(b3.plugin.Plugin):
         else:
             self.debug('Plugin loaded normal')
         self._adminPlugin.registerCommand(self, "demote", self.minLevelD, self.cmd_demote,alias="d")
-        self._adminPlugin.registerCommand(self, "putgroup", self.minLevelDT, self.cmd_putgroup, alias="pg")
-        self._adminPlugin.registerCommand(self, "demotiontest", self.minLevelPG, self.cmd_demotiontest, alias="dt")
+        self._adminPlugin.registerCommand(self, "putgroup", self.minLevelPG, self.cmd_putgroup, alias="pg")
+        self._adminPlugin.registerCommand(self, "demotiontest", self.minLevelDT, self.cmd_demotiontest, alias="dt")
         global pluginInstance
         
         pluginInstance = self
